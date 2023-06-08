@@ -6,12 +6,8 @@ import TodoList from './components/TodoList'
 export default function App() {
 	// useState is checking local storage and getting the value if it exists
 	// it no value exists, it defaults to an empty array
-	const [todos, setTodos] = useState(() => {
-		const localValue = localStorage.getItem('ITEMS')
-		if (localValue == null) return []
-
-		return JSON.parse(localValue)
-	})
+	const localValue = localStorage.getItem('ITEMS')
+	const [todos, setTodos] = useState(JSON.parse(localValue) || [])
 
 	// every time the todos is modified, save todos in localStorage
 	useEffect(() => {
@@ -50,10 +46,10 @@ export default function App() {
 	console.log(todos)
 
 	return (
-		<div className="container">
+		<>
 			<TodoForm addTodo={addTodo} />
 			<h1 className="header">TODO List</h1>
 			<TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
-		</div>
+		</>
 	)
 }
