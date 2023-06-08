@@ -1,5 +1,5 @@
 * {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	box-sizing: border-box;
 }
 
@@ -16,6 +16,7 @@ body {
 }
 
 .form-label {
+	color: hsl(303, 11%, 69%);
 	padding-left: 0.2rem;
 }
 
@@ -42,6 +43,7 @@ body {
 	/* border-radius: 0.25em; */
 	cursor: pointer;
 	outline: none;
+	font-weight: bold;
 }
 
 .btn:hover,
@@ -50,40 +52,50 @@ body {
 }
 
 .btn.btn-danger {
-	background: hsl(0, 0%, 100%);
-	/* border: 1px solid hsl(0, 0%, 0%); */
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1.3rem;
+	background: hsla(0, 0%, 100%, 0);
 	border: none;
-	color: hsl(0, 0%, 0%);
-	padding: 0.3em 0.5em;
+	color: hsl(0, 0%, 54%);
+	padding: 0em 0em;
 }
 
 .btn.btn-danger:hover,
 .btn.btn-danger:focus-visible {
-	background: hsl(0, 100%, 93%);
-	box-shadow: 0px 0px 3px rgba(255, 125, 125, 0.336);
+	color: hsl(0, 100%, 75%);
+	text-shadow: 0px 0px 10px rgb(255, 213, 213);
 }
 
 .new-item-form input {
 	width: 100%;
 	outline: none;
-	background: hsl(0, 0%, 100%);
-	border: 1px solid hsl(0, 0%, 100%);
+	background: rgb(210, 210, 210);
+	border: 1px solid rgb(210, 210, 210);
 	/* border-radius: 0.25em; */
 	padding: 0.25em 0.5em;
-	margin-right: 2px;
+	margin-right: 4px;
 	color: hsl(0, 0%, 0%);
+	font-size: 1rem;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .new-item-form input:focus {
-	border: 1px solid hsl(60, 100%, 70%);
+	box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+	background: rgb(255, 255, 255);
+}
+
+.new-item-form button {
+	background: rgb(210, 210, 210);
+	font-size: 1rem;
 }
 
 .new-item-form button:hover {
-	background: hsl(52, 100%, 88%);
-	box-shadow: 0px 0px 3px rgba(255, 238, 0, 0.514);
+	background: rgb(255, 255, 255);
+	box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
 }
 
 .header {
+	color: hsl(0, 0%, 100%);
 	font-size: 1.5rem;
 	margin-top: 1.5rem;
 	margin-bottom: 0.5rem;
@@ -121,6 +133,7 @@ body {
 
 .list-title {
 	font-size: 1.1rem;
+	padding-bottom: 2px;
 }
 
 .list li:has(input:focus-visible) label {
@@ -139,10 +152,10 @@ body {
 .list li label::before {
 	content: '';
 	display: block;
-	width: 1.2rem;
-	height: 1.2rem;
+	width: 1.1rem;
+	height: 1.1rem;
 	background: hsl(0, 0%, 100%);
-	/* border-radius: 0.25em; */
+	border-radius: 0.25em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
