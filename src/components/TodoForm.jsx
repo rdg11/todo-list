@@ -13,7 +13,7 @@ function TodoForm({ addTodo }) {
 	}
 
 	return (
-		<form onSubmit={handleSubmit} className="new-item-form">
+		<form onSubmit={handleSubmit} className="new-item-form" autocomplete="off">
 			<label htmlFor="item" className="form-label">
 				What do you need to do today?
 			</label>
@@ -23,6 +23,7 @@ function TodoForm({ addTodo }) {
 					onChange={e => setItem(e.target.value)}
 					type="text"
 					id="item"
+					maxLength="43"
 				/>
 				<button className="btn">Add</button>
 			</div>
