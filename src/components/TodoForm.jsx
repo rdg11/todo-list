@@ -4,7 +4,7 @@ function TodoForm({ addTodo }) {
 	const [item, setItem] = useState('')
 
 	function handleSubmit(e) {
-		e.preventDefault()
+		e.preventDefault() // for input text element, prevents page reload on submit
 		if (item === '') return
 
 		addTodo(item)
@@ -13,7 +13,7 @@ function TodoForm({ addTodo }) {
 	}
 
 	return (
-		<form onSubmit={handleSubmit} className="new-item-form" autocomplete="off">
+		<form onSubmit={handleSubmit} className="new-item-form" autoComplete="off">
 			<label htmlFor="item" className="form-label">
 				What do you need to do today?
 			</label>
